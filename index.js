@@ -218,4 +218,9 @@ iSDK.prototype.fsGoal = function(integration, name, contactId, callback){
 	this.methodCaller('FunnelService.achieveGoal', ca, callback);
 }
 
+iSDK.prototype.linkCons = function (cId1, cId2, linkTypeId, callback) {
+	var ca = [this.apiKey, cId1, cId2, linkTypeId];
+	this.methodCaller("ContactService.linkContacts", ca, callback);
+};
+
 iSDK.types = types;
