@@ -223,4 +223,9 @@ iSDK.prototype.linkCons = function (cId1, cId2, linkTypeId, callback) {
 	this.methodCaller("ContactService.linkContacts", ca, callback);
 };
 
+iSDK.prototype.unlinkCons = function (cId1, cId2, linkTypeId, callback) {
+	var ca = [this.apiKey, cId1, cId2, linkTypeId];
+	this.methodCaller("ContactService.unlinkContacts", ca, callback);
+};
+
 iSDK.types = types;
